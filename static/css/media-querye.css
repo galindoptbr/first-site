@@ -1,0 +1,403 @@
+@charset "UTF-8";
+
+/* Color Theme */
+.Design-gráfico-1-hex { color: #483FCF; }
+.Design-gráfico-2-hex { color: #FFD44D; }
+.Design-gráfico-3-hex { color: #F8F8F8; }
+.Design-gráfico-4-hex { color: #161E2E; }
+
+/* 
+Typical Device Breakpoint
+
+Cellphone: from 375px to 667px
+Tablet: from 1024px to 768px
+Laptop: from 1440px to 900px
+Desktop: from 1920px to 1080px
+ */
+
+ @media screen and (min-width: 375px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NavBar */
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #483FCF;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        z-index: 300;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 11vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #483FCF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translate(100%);
+        transition: transform 0.3s ease-in; 
+    }
+
+    .navbar li {
+        margin-top: -8vh;
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .logo {
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: auto;
+        font-weight: 800;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    /* Section with Banner */
+
+    .first-banner h1 {
+        text-align: center;
+        width: 90vw;
+        font-size: 35px;
+        color: white;
+    }
+    
+    .first-banner p {
+        text-align: center;
+        color: white;
+        width: 85vw;
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+
+    /* Section About Us */
+
+    .about-us-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 90vw;  
+        margin: 0 auto; 
+    }
+    
+    .about-box {
+        max-width: 80vw;
+        text-align: center;
+    }
+    
+    .about-img img {
+        width: 100%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.342);
+    }
+
+    .about-box button {
+        font-weight: 400;
+        font-size: 1rem;
+        cursor: pointer;
+        background: #544ae4;
+        color: #F8F8F8;
+        padding: 10px;
+        width: 40%;
+        height: 45px;
+        border: none;
+        border-radius: 3px;  
+    }
+
+    /* Sectcion What We Do */
+
+    .what-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 90vw;  
+        margin: 0 auto; 
+    }
+
+    .what-box {
+        max-width: 70vw;
+    }
+
+    /* Section Portfolio */
+
+    .h2-portfolio {
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
+    
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    
+    .portfolio-container .portfolio-box {
+        position: relative;
+        overflow: hidden;
+        display: flex; 
+    }
+    
+    .portfolio-box img {
+        width: 100%;
+        transition: .5s ease;
+    }
+    
+    .portfolio-box:hover img {
+        transform: scale(1.1);
+    }
+    
+    .portfolio-box .portfolio-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, .1), #483FCF);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        transform: translateY(100%);
+        transition: .5s ease;  
+    }
+    
+    .portfolio-box:hover .portfolio-layer {
+        transform: translateY(0);
+    }
+    
+    .portfolio-layer h4 {
+        font-size: 2rem;
+        color: #F8F8F8;
+        text-shadow: 1px 1px 5px black;
+    }
+    
+    .portfolio-layer p {
+        color: #F8F8F8;
+        font-size: 1.2rem;
+        margin: .3rem 0 1rem;
+        text-shadow: 1px 1px 5px black;
+        max-width: 80vw;
+    }
+    
+    .portfolio-layer a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background: #F8F8F8;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px black;
+    }
+    
+    .portfolio-layer a i {
+        font-size: 2rem;
+        color: #161E2E;
+    }
+
+    /* Section Professional Team */
+    
+    .professional-team-box {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.267);
+        max-width: 250px;
+        max-height: 550px;
+        background: #F8F8F8;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    
+    .professional-team-box img {
+        border-radius: 10px 10px 0 0;
+        width: 250px;   
+    }
+    
+    .professional-team h2 {
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+    
+    .members-team {
+        padding: 2rem;   
+    }
+    
+    .members-team .name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding-bottom: .3rem;
+    }
+    
+    .members-team .position {
+        padding-bottom: .5rem;
+        color: #808081;
+    }
+    
+    .members-team .about-member {
+        font-size: 14px;
+    }
+
+    .social-team {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        background: white;
+        margin-top: -45px;
+        margin-left: 15px;
+        width: 220px;
+        height: 33px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.384);
+    }
+
+    .social-team img {
+        margin-top: 5px;
+        width: 25px;
+        height: 25px;   
+    }
+
+    /* Section Jobs */
+
+    .jobs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+    }
+
+    .jobs-box {
+        max-width: 95vw;
+    }
+
+    .jobs-img img {
+        display: none;
+    }
+
+    .jobs-box button {
+        width: 40%; 
+    }
+
+    /* Section Contact Us */
+
+    .contact-us-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        height: 100%;
+        background: #F8F8F8;
+    }
+
+    .contact-form {
+        background: white;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.384);
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .info-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 4rem;
+        color: #F8F8F8;
+        text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+    }
+
+
+    .form {
+        grid-template-columns: 1fr;
+        margin-right: 60px;
+    }
+
+    .left {
+        height: 300px;
+    }
+
+    .field {
+        font-family: 'Nunito', sans-serif;
+        border: 1px solid rgba(128, 128, 128, 0.322);
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    /* Section Footer */
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        background-color: #161E2E;
+        margin-left: -35px;
+    }
+    
+    .footer-box {
+        color: #F8F8F8;       
+        max-width: 85vw;
+    }
+    
+    .footer-box h5 {
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .footer-box p {
+        font-size: 15px;
+        padding-bottom: 1rem;
+    }
+    
+    .footer-links {
+        font-size: 15px;
+        list-style: none;
+    }
+    
+    .footer-links li {
+        padding-bottom: .5rem;
+    }
+    
+    .newsletter-email {
+        height: 5vh;
+        padding-left: 1rem;
+        border-radius: 5px 0 0 5px;
+        border: none; 
+    }
+    
+    .newsletter-button {
+        height: 5vh;
+        width: 15vw;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        color: #F8F8F8;
+        background-color: #483FCF;
+        margin-left: -5px;
+    }
+    
+    .icons-footer img {
+        margin-top: 2rem;
+        padding-right: 1rem;
+        width: 25px;
+    }
+    
+ }
