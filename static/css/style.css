@@ -163,7 +163,7 @@ nav {
     align-items: center;
     padding-top: 2rem;
     font-size: 2rem;
-    background-image: url(/first-site/static/images/first-banner.png);
+    background-image: url(/static/images/first-banner.png);
     background-size: cover;
     background-position: center; 
 }
